@@ -4,7 +4,8 @@
   "description": "Express tutorial",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "prestart": "lsof -nti:3500 | xargs kill -9",
+    "start": "nodemon server",
     "dev": "nodemon server"
   },
   "author": "Dave Gray",
@@ -20,6 +21,6 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.16"
   }
 }
